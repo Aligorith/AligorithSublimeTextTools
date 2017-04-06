@@ -6,7 +6,8 @@
 # Original Author: Joshua Leung
 # Date: April 2017
 
-import sublime, sublime_plugin
+import sublime
+import sublime_plugin
 
 
 ######################################
