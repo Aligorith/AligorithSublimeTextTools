@@ -7,6 +7,26 @@
 				"caption" : "Aligorith's Tools",
 				"children" : [
 					{
+						"id" : "GeneralTools",
+						"caption": "General Tools",
+						"children" : [
+							{
+								"caption" : "Toggle CamelCase / underscores_style",
+								"command" : "convert_camel_case_underscores"
+							},
+							{
+								"caption" : "To CamelCase...",
+								"command" : "convert_camel_case_underscores",
+								"args" : {"mode" : "camel"}
+							},
+							{
+								"caption" : "To underscore_style...",
+								"command" : "convert_camel_case_underscores",
+								"args" : {"mode" : "underscores"}
+							}
+						]
+					},
+					{
 						"id" : "LatexTools",
 						"caption" : "Latex Tools",
 						"children" : [

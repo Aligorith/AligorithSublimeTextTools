@@ -14,5 +14,9 @@
 	{
 		"caption" : "Clear \\enquote{...} Preview",
 		"command" : "clear_latex_quote_preview"
+	},
+	{
+		"caption" : "Toggle CamelCase / underscores_style",
+		"command" : "convert_camel_case_underscores"
 	}
 ]
