@@ -1,0 +1,33 @@
+[
+	{
+		"id" : "tools",
+		"children" : [
+			{
+				"id" : "AligorithTools",
+				"caption" : "Aligorith's Tools",
+				"children" : [
+					{
+						"id" : "LatexTools",
+						"caption" : "Latex Tools",
+						"children" : [
+							{
+								"caption": "Replace Quotes with \\enquote{}",
+								"command" : "latex_quotes_to_enquote"
+							},
+							{
+								"caption" : "Preview Quote Fixes",
+								"command" : "preview_latex_quote_fixes"
+							},
+							{
+								"caption" : "Clear Quote Fixes Preview",
+								"command" : "clear_latex_quote_preview"
+							}
+						]
+					}
+				]
+			}
+			
+		]	
+	}
+	
+]

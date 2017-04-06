@@ -1,0 +1,18 @@
+[
+	{
+		"caption": "Replace Quotes with \\enquote{...}",
+		"command" : "latex_quotes_to_enquote"
+	},
+	{
+		"caption": "Fix Quotes",
+		"command" : "latex_quotes_to_enquote"
+	},
+	{
+		"caption" : "Preview Quotes to \\enquote{...}",
+		"command" : "preview_latex_quote_fixes"
+	},
+	{
+		"caption" : "Clear \\enquote{...} Preview",
+		"command" : "clear_latex_quote_preview"
+	}
+]
