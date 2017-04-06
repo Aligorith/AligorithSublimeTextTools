@@ -19,9 +19,21 @@ There are the following categories of tools:
   * **"Clear \\enquote{...} Preview"**
     This clears all the highlights that the *"Preview"* tool added (in case you decide to not go ahead).
 
-* **General Tools** - General text manipulation tools
+* **General Tools** - General text manipulation tools  
 
-* **Color Tools** - Tools to make it easier to work with colours
+  * **"Toggle CamelCase / underscore__style"**  
+    Toggle between CamelCase and under_scores for the selected text. This is most useful when developing
+	ST plugins, as you need to do this when mapping between the plugin code and the tool bindings/calling.
+
+* **Color Tools** - Tools to make it easier to work with colours  
+
+   TODO: This is not currently implemented. But, the idea is that we'll have tools to do the following:
+   1) Easily convert between all the various colour combinations (e.g. float vs byte vs hex RGB(A) values,
+      and also between RGB and #Hexcodes, or RGB and HSV/L)
+   2) Visualise colours under cursor (with the preview panels in ST3)
+   3) Show colour pickers to choose colours (several different types should be possible)
+   4) Provide autocomplete options list for XKCD / X11 / matplotlib-1-char / SVG colours (as appropriate).
+      Probably will require some filetype + imports magic to figure out what we're most likely to want.
 
 
 Requirements
