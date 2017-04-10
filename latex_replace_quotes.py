@@ -28,12 +28,12 @@ REGIONID_UNICODE_SCLOSE_QUOTES = "UnicodeSCloseQuotes"
 def find_double_quotes(view):
 	# Regex expression to find each quote pair + their contents + an extra character
 	# Note: This is "v4" below
-	matcher = r"([`]{2})([^`])(\\?.)*?([^'])([']{2})([)}\n\]\s])"
+	matcher = r"([`]{2})([^`])(\\?.)*?([^'])([']{2})([)}\n\]\s,.;?])"
 	return view.find_all(matcher, 0)
 	
 # Find all the single quotes regions
 def find_single_quotes(view):
-	matcher = r"([({\[\s])`([^`])(\\?.)*?([^'])'([)}\n\]\s])"
+	matcher = r"([({\[\s])`([^`])(\\?.)*?([^'])'([)}\n\]\s,.;?])"
 	return view.find_all(matcher, 0)
 	
 
@@ -245,6 +245,7 @@ Test Suite -------------------------------------
 6) Capture (``blah'')
 7) Capture {``blah''}
 8) Capture ``blah'' blah
+9) Capture ``active'',
 
 Attempts --------------------------------------
 V1: Correct (1,2,3,6,7), Incorrect (4), Missed (5)
