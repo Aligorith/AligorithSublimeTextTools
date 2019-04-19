@@ -72,4 +72,46 @@ class ConvertCamelCaseUnderscoresCommand(sublime_plugin.TextCommand):
 		
 
 ###########################################
+# Toggle between arrow/dot accessors for C/C++
+
+class ToggleArrowDotAccessorsCommand(sublime_plugin.TextCommand):
+	"""
+	Toggle between dot and arrow accessors for C/C++ code.
+	 * Dot Example:   test.data
+	 * Arrow Example: test.data
+	
+	Multiple Edit Test:
+	 * Put multiple cursors:  test.data.data2
+	 * Select both regions:   test->data().not_data
+	"""
+	
+	def run(self, edit, **args):
+		for region in reversed(self.view.sel()):
+			if region.size() == 0:
+				# Try one character beside the region to see what we've got
+				next_char = self.view.substr(region.begin())
+				if next_char == ".":
+					# Replace with arrow
+					edit_region = sublime.Region(region.begin(), region.end() + 1)
+					self.view.replace(edit, edit_region, "->")
+				elif next_char == "-":
+					# Check if it's an arrow
+					edit_region = sublime.Region(region.begin(), region.end() + 2)
+					if self.view.substr(edit_region) == "->":
+						self.view.replace(edit, edit_region, ".")
+						# TODO: Switch back to behind the edit point
+				elif next_char == ">":
+					# Check if it's an arrow (we might be in the middle, e.g. after dot conversion)
+					edit_region = sublime.Region(region.begin() - 1, region.end() + 1)
+					if self.view.substr(edit_region) == "->":
+						self.view.replace(edit, edit_region, ".")
+			else:
+				# Try to see if the selected text is something we want to replace
+				sel_text = self.view.substr(region)
+				if sel_text == ".":
+					self.view.replace(edit, region, "->")
+				elif sel_text == "->":
+					self.view.replace(edit, region, ".")
+
+###########################################
 

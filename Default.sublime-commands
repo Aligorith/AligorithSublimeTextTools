@@ -18,5 +18,9 @@
 	{
 		"caption" : "Toggle CamelCase / underscores_style",
 		"command" : "convert_camel_case_underscores"
+	},
+	{
+		"caption" : "Toggle Arrow/Dot Accessors (C/C++)",
+		"command" : "toggle_arrow_dot_accessors"
 	}
 ]

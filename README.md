@@ -25,7 +25,15 @@ There are the following categories of tools:
     Toggle between CamelCase and under_scores for the selected text. This is most useful when developing
 	ST plugins, as you need to do this when mapping between the plugin code and the tool bindings/calling.
 
+  * **"Toggle Arrow / Dot Accessors"**
+    Toggle between . and -> accessors in C/C++ code using Alt-` (Alt + accent/tilde key). For example, this allows
+	you to go between struct.member and struct->member. It works if the cursor sits before/in-between . or ->
+	or if you've got multiple ones of these selected.
+
+
 * **Color Tools** - Tools to make it easier to work with colours  
+
+   **NOTE: See https://github.com/Aligorith/Hex-to-RGBA**
 
    TODO: This is not currently implemented. But, the idea is that we'll have tools to do the following:
    1) Easily convert between all the various colour combinations (e.g. float vs byte vs hex RGB(A) values,

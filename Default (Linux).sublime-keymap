@@ -1,0 +1,3 @@
+[
+    { "keys": ["alt+`"], "command": "toggle_dot_arrow_accessors" }
+]
